@@ -1,0 +1,72 @@
+$black: #121212;
+$green: #0EC261;
+$gray:  #999999;
+$light-gray: #EEEEEE;
+
+.button-more {
+    border:none;
+    position: relative;
+    width: 164px;
+    height: 48px;
+    left: 0;
+    margin-top: 60px;
+    background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+    background-blend-mode: darken;
+    border-radius: 4px;
+    mix-blend-mode: normal;
+  
+  }
+  
+  .button-more__text{
+    position: static;
+    display: block;
+    left: 0%;
+    right: 0%;
+    top: 31.25%;
+    bottom: 22.92%;
+  
+    font-family: "Roboto-Bold";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color:$light-gray;
+  }
+  
+  .button-more:hover {
+    filter: brightness(90%);
+  }
+  
+  .button-more:active {
+    filter: brightness(80%);
+  }
+  
+  .button-more::after {
+    filter: brightness(90%);
+  }
+  
+  .button-more__disabled {
+    opacity: 0.6;
+    border:none;
+    position: relative;
+    width: 164px;
+    height: 48px;
+    left: 128px;
+    top: 487px;
+    background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+    background-blend-mode: darken;
+    border-radius: 8px;
+    mix-blend-mode: normal;
+  }
+
+  
+@media (max-width: 767px) {
+  
+.button-more {
+  width: 100%;
+  left:0;
+  top: 50vh;
+  border-radius: 0px;
+}
+}
