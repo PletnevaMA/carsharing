@@ -1,6 +1,5 @@
 import React from "react";
 import "./BurgerMenu.module.scss";
-import teleg from '../img/Telegram_white.svg';
 
 class BurgerMenu extends React.Component {
   render() {
