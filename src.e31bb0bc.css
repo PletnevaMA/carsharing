@@ -960,27 +960,25 @@ button.swiper-pagination-bullet {
   height: auto;
 }
 .button_green {
-  background: linear-gradient(90deg, #13493F 0%, #0C7B1B 100%) !important;
-  position: absolute;
-  margin-top: 35px;
-  width: 164px;
-  height: 48px;
-  border-radius: 4px;
-  border: none;
+  background: linear-gradient(90deg, #13493F 0%, #0C7B1B 100%);
 }
 
 .button_blue {
   background: linear-gradient(90deg, #132949 0%, #0C7B67 100%);
-  position: absolute;
-  margin-top: 35px;
-  width: 164px;
-  height: 48px;
-  border-radius: 4px;
-  border: none;
 }
 
 .button_pink {
   background: linear-gradient(90deg, #493013 0%, #7B0C3B 100%);
+}
+
+.button_purple {
+  background: linear-gradient(90deg, #281349 0%, #720C7B 100%);
+}
+
+.button_green,
+.button_blue,
+.button_pink,
+.button_purple {
   position: absolute;
   margin-top: 35px;
   width: 164px;
@@ -989,14 +987,25 @@ button.swiper-pagination-bullet {
   border: none;
 }
 
-.button_purple {
-  background: linear-gradient(90deg, #281349 0%, #720C7B 100%);
-  position: absolute;
-  margin-top: 35px;
-  width: 164px;
-  height: 48px;
-  border-radius: 4px;
-  border: none;
+.button_green:hover,
+.button_blue:hover,
+.button_pink:hover,
+.button_purple:hover {
+  filter: brightness(90%);
+}
+
+.button_green:active,
+.button_blue:active,
+.button_pink:active,
+.button_purple:active {
+  filter: brightness(80%);
+}
+
+.button_green::after,
+.button_blue::after,
+.button_pink::after,
+.button_purple::after {
+  filter: brightness(90%);
 }
 
 .button_text {
