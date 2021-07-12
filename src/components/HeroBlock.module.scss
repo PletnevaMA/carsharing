@@ -2,6 +2,7 @@ $black: #121212;
 $green: #0EC261;
 $gray:  #999999;
 $light-gray: #EEEEEE;
+@import '../mixins.scss';
 
 .hero-block{
     position: relative;
@@ -9,81 +10,43 @@ $light-gray: #EEEEEE;
     height: 200px;
     left: 0;
     top: 195px;
-  }
-  
-  .hero-block__carsharing{
-    position: static;
-    width: 100%;
-    height: 66px;
-    margin-top: 32px;
-    font-family: "Roboto-Bold";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 70px;
-    line-height: 66px;
-    color:$black;
-  }
-  
-  .hero-block__drive{
-    position: static;
-    width: 100%;
-    height: 66px;
-    margin-top: 8px;
-    font-family: "Roboto-Bold";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 70px;
-    line-height: 66px;
-    color:$green;
-  }
-  
-  .hero-block__arenda{
-    position: static;
-    width: 100%;
-    height: 30px;
-    margin-top: 42px;
-    font-family: "Roboto-Light";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 26px;
-    line-height: 30px;
-    color:$gray;
-  }
-  
-  @media (max-width: 767px) {
 
-    .hero-block{
-      position: relative;
-      width: 100%;
-      height: 200px;
-      top: 20px;
+    &__carsharing {
+      position: static;
+      height: 66px;
+      margin-top: 32px;
+      font-family: "Roboto-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 70px;
+      line-height: 66px;
+      color:$black;
     }
 
-    .hero-block__carsharing{
-      width: 90%;
-      height: 32px;
-      margin-left:16px;
-      font-size: 32px;   
-      margin-top: 0;
+    &__drive{
+      position: static;
+      height: 66px;
+      margin-top: 8px;
+      font-family: "Roboto-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 70px;
+      line-height: 66px;
+      color:$green;
     }
-  
-    
-    .hero-block__drive{
-      width: 90%;
-      height: 32px;
-      margin-left:16px;
-      font-size: 32px;
-      margin-top: 0;
-      
-    }
-    .hero-block__arenda{
-      width: 90%;
-      height: 34px;
+
+    &__arenda {
+      position: static;
+      height: 30px;
+      margin-top: 42px;
+      font-family: "Roboto-Light";
+      font-style: normal;
       font-weight: 300;
-      font-size: 18px;
-      margin-left:16px;
-      margin-top: 30px;
-      line-height: 21px;
+      font-size: 26px;
+      line-height: 30px;
+      color:$gray;
     }
   }
+
+  @include heroblock-media;
  

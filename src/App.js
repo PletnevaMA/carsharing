@@ -19,7 +19,7 @@ class App extends React.Component {
             <Footer />
           </div>
         </div>
-        <div className="container__rigth">
+        <div className="container__slider">
          <Slider />
         </div>
       </div>

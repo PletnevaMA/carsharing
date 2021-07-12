@@ -1,7 +1,6 @@
 
 import React from 'react';
 import "./Slider.module.scss";
-import ButtonMore from './ButtonMore';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/swiper.scss';

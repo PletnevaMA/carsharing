@@ -2,50 +2,42 @@ $black: #121212;
 $green: #0EC261;
 $gray:  #999999;
 $light-gray: #EEEEEE;
+@import '../mixins.scss';
+
 .button-standart {
-    border:none;
-    position: static;
-    width: 250px;
-    height: 48px;
-    left: 0;
-    margin-top: 250px;
-    background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
-    background-blend-mode: darken;
-    border-radius: 8px;
-    mix-blend-mode: normal;
-  
-  }
-  
+  border:none;
+  position: static;
+  width: 250px;
+  height: 48px;
+  left: 0;
+  margin-top: 250px;
+  background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+  background-blend-mode: darken;
+  border-radius: 8px;
+  mix-blend-mode: normal;
+
   .button-standart__text{
-    position: static;
     display: block;
-    left: 0%;
-    right: 0%;
-    top: 31.25%;
-    bottom: 22.92%;
-  
     font-family: "Roboto-Bold";
-    font-style: normal;
-    font-weight: 500;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     color:$light-gray;
   }
-  
-  .button-standart:hover {
+
+  &:hover {
     filter: brightness(90%);
   }
-  
-  .button-standart:active {
+
+  &:active {
     filter: brightness(80%);
   }
-  
-  .button-standart::after {
+
+  &::after {
     filter: brightness(90%);
   }
-  
-  .button-standart__disabled {
+
+  &__disabled{
     opacity: 0.6;
     cursor: not-allowed;
     border:none;
@@ -59,15 +51,7 @@ $light-gray: #EEEEEE;
     border-radius: 8px;
     mix-blend-mode: normal;
   }
+}
+  
 
-  
-@media (max-width: 767px) {
-  
-.button-standart {
-  width: 100%;
-  left:0;
-  top: 56,8%;
-  border-radius: 0px;
-  margin-top:0;
-}
-}
+@include button_media;

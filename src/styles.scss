@@ -2,7 +2,7 @@ $black: #121212;
 $green: #0EC261;
 $gray:  #999999;
 $light-gray: #EEEEEE;
-
+@import './mixins.scss';
 @font-face { 
   font-family: 'Roboto-Medium'; 
   src: url('./fonts/Roboto-Medium.ttf');
@@ -85,68 +85,35 @@ body{
   min-width: 320px;
   height: 100vh;
 }
-.container{
-  
+.container{  
   height: 100vh;
-}
-.container__left {
-  position: static;
-  display: block;
-  float: left;
-  margin-left: 64px;
-  width: 46.5%;
-  height: 100%;
-}
 
-.container__rigth{
-  position:static;
-  display: flex;
-  flex: 1;
-  height: 100%;
-} 
-
-.container__left__content {
-  display: flex;
-  flex-direction: column;
-  position: relative;  
-  width: 81.4%;
-  margin: auto;
-  height: auto;
-}
-
-
-@media (max-width: 1440px){
-  .container__left{
-    width: 53.7%;
-  }  
-}
-
-
-@media (max-width: 1024px){
-  .container__rigth{
-    display: none;
-  }  
-  .container__left{
-    width: 100%;
-  }
-}
-  
-@media (max-width: 767px){
-  .container__left{
-    width: 100%;
-    margin-left: 0;
-
-  }  
-  .container__left__content{
-    position: absolute;
-    width: 100%;
+  &__left{
+    position: static;
+    display: block;
+    float: left;
+    margin-left: 64px;
+    width: 46.5%;
     height: 100%;
-    margin: 0;
+    &__content{
+      display: flex;
+      flex-direction: column;
+      position: relative;  
+      width: 81.4%;
+      margin: auto;
+      height: auto;
+    }
   }
-  .container__rigth{
-    display: none;
+
+  &__slider{
+    position:static;
+    display: flex;
+    flex: 1;
+    height: 100%;
   }
 }
+
+@include styles_media;
 
 
 

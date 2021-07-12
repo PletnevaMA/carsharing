@@ -2,6 +2,7 @@ $black: #121212;
 $green: #0EC261;
 $gray:  #999999;
 $light-gray: #EEEEEE;
+@import '../mixins.scss';
 
 .logo {
     position: static;
@@ -35,31 +36,4 @@ $light-gray: #EEEEEE;
     color: $gray;
   }
 
-  @media (max-width: 767px) {
- 
-    .logo {
-      position: static;
-      display: block;  
-      width: 99%;
-      height: 32px;
-      margin-top: 16px;
-      justify-content:start;    
-     
-    }
-    
-    .logo__text {
-      position: static;
-      margin-right: 16px;
-      margin-left: auto;
-    }
-    
-    .logo__map {
-      position: static;
-      margin-right: 16px;
-      margin-left: auto;
-      display: block;
-      text-align: right;
-      
-    }
-  }
-  
+ @include logo_media;
