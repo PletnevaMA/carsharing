@@ -1,0 +1,125 @@
+
+$black: #121212;
+$green: #0EC261;
+$gray:  #999999;
+$light-gray: #EEEEEE;
+@import '../mixins.scss';
+
+#menu__toggle {
+    opacity: 0;
+  }
+
+  .hamburgermenu{   
+    position: relative;
+    height: 0;
+    width: 0
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    background-color: transparent;
+
+    &::before{
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after{
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+  
+  #menu__toggle:checked ~ .menu__box {
+   list-style: none;
+   width: 31%;
+   padding: 20% 10%;
+
+   & .menu__item{
+    visibility: visible;
+   }
+   & .menu__icon{
+    visibility: visible;
+   }
+  }
+  
+  .menu__btn {
+    top: 0;
+    left: 0;   
+    position: fixed;
+    width: 64px;
+    height: 96px;
+    cursor: pointer;
+    background-color: $black;
+    z-index: 3;
+
+    &>span,
+    &>span::before,
+    &>span::after{
+      display: block;
+      position:fixed;
+      width: 28px;
+      height: 4px;
+      background-color: $light-gray;
+      transition-duration: .25s;
+    }
+
+    &>span{
+      position: absolute; 
+      top: 46px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 2px;
+    }
+
+    &>span::before{
+      content: '';
+      top: -8px;
+      border-radius: 2px;
+    }
+
+    &>span::after {
+      content: '';
+      top: 8px;
+      border-radius: 2px;
+    }
+  }
+  
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 64px;
+    height: 100%;
+    margin: 0;
+    background-color: $black;
+    transition-duration: .25s;
+    z-index:2;
+  }
+  
+  .menu__item {
+    visibility: hidden;
+    display: block;
+    color: $light-gray;
+    font-family: 'Roboto-Medium';
+    font-size: 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top:28px;
+    &:hover{
+      color: $green;
+    }
+
+    &__icon{
+      display:inline-block;   
+      width: 56px;
+
+      &:hover{
+        svg {
+          fill: $green;
+        }
+      }
+    }
+   }
+
+ @include burgermenu_media;
+   
+

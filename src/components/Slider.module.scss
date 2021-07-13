@@ -1,0 +1,18 @@
+$black: #121212;
+$green: #0EC261;
+$gray:  #999999;
+$light-gray: #EEEEEE;
+@import '../mixins.scss';
+
+  .swiper-button-prev, .swiper-button-next {
+    color:$light-gray !important;;
+  }
+  .swiper-pagination-bullet {
+   background: $light-gray !important; 
+   opacity: 1 !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: $green !important;
+  }
+
+@include slider_media;
