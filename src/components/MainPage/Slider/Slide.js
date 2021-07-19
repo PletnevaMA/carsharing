@@ -1,6 +1,6 @@
 import React from 'react';
 import './Slide.module.scss';
-import ButtonSlider from './ButtonSlider';
+import ButtonSlider from '../Button/ButtonSlider';
 
 class Slide extends React.Component {
     render(){

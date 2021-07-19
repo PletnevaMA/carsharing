@@ -8,10 +8,10 @@ import 'swiper/components/effect-fade/effect-fade.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/navigation/navigation.scss';
 import Slide from './Slide';
-import slide1 from '../images/1.png';
-import slide2 from '../images/2.png';
-import slide3 from '../images/3.png';
-import slide4 from '../images/4.png';
+import slide1 from '../../../images/1.png';
+import slide2 from '../../../images/2.png';
+import slide3 from '../../../images/3.png';
+import slide4 from '../../../images/4.png';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 

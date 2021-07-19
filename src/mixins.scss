@@ -206,3 +206,29 @@ $mobile: 767px;
     }
   }
 }
+
+@mixin order_media{
+  @media (max-width: $mobile){
+    .container{
+      height: auto;
+      &__full{
+      margin-left: 0;      
+      height: auto;
+      &__content{
+        width: 100%;
+      }
+    }
+  }
+  }
+}
+
+@mixin result_media{
+    @media (max-width: 768px) {
+      .result {
+        width: 100%;
+        float:initial;
+        margin-bottom: 0;
+        
+      }
+    }
+  }

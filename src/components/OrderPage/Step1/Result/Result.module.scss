@@ -1,0 +1,67 @@
+$black: #121212;
+$green: #0EC261;
+$gray:  #999999;
+$light-gray: #EEEEEE;
+@import '../../../../mixins.scss';
+.result {
+    margin-bottom: 55px;
+    display: block;
+    width: 30%;
+    float: right;
+    &__wrapper {
+      padding: 25px 16px 0 16px;
+    }
+    &__title {
+      font-size: 18px;
+      font-family: "Roboto-Medium";
+      font-weight: 500;
+      text-align: right;
+      margin-bottom: 25px;
+    }
+   
+    &__point {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      font-size: 14px;
+      font-weight: 300;
+      font-family: "Roboto-Light";
+      span {
+        display: block;
+      }
+      span:nth-child(1) {
+        max-width: max-content;
+        padding-right: 4px;
+        width: 100%;
+      }
+      span:nth-child(2) {
+        width: 100%;
+        min-height: 1px;
+        margin: 0 auto;
+        border-bottom: 1px dotted #999;
+      }
+      span:nth-child(3) {
+        width: 100%;
+        max-width: max-content;
+        color: #999;
+        padding-left: 4px;
+        text-align: right;
+      }
+    }
+    &__price {
+      
+      font-size: 16px;
+      &__title{
+        font-family: "Roboto-Medium";
+        font-weight: 500;
+      }  
+      &__count{
+        font-family: "Roboto-Light";
+        font-weight: 400;
+      }   
+    }
+  }
+
+  @include result_media;
+  

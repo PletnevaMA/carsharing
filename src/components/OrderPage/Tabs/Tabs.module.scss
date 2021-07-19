@@ -1,0 +1,32 @@
+$black: #121212;
+$green: #0EC261;
+$gray:  #999999;
+$light-gray: #EEEEEE;
+
+a{
+    text-decoration: none;
+}
+.tabs{
+    margin-top: 47px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 16px 10px 16px;
+    li{
+        display: inline; 
+        margin-right: 36px; 
+        font-family: "Roboto-Bold";
+        font-size: 14px;
+        line-height: 16px;
+        color:$gray;
+        &::after{
+            content: "";
+            position: absolute;
+            margin: 0 16px;
+            border: 8px solid transparent;
+            border-left: 8px solid $gray;
+        }
+       
+    }
+
+}
+ 

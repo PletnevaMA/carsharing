@@ -1,0 +1,58 @@
+$black: #121212;
+$green: #0EC261;
+$gray:  #999999;
+$light-gray: #EEEEEE;
+
+.button-result {
+  border:none;
+  width: 250px;
+  height: 48px;
+  left: 0;
+  margin-top: 30px;
+  background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+  background-blend-mode: darken;
+  border-radius: 8px;
+  mix-blend-mode: normal;
+  &__text{
+    display: block;
+    font-family: "Roboto-Bold";
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color:$light-gray;
+  }
+  
+
+  &:hover {
+    filter: brightness(90%);
+  }
+
+  &:active {
+    filter: brightness(80%);
+  }
+
+  &::after {
+    filter: brightness(90%);
+  }
+
+  &__disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    border:none;
+    position: absolute;
+    width: 250px;
+    height: 48px;
+    left: 128px;
+    top: 487px;
+    background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+    background-blend-mode: darken;
+    border-radius: 8px;
+    mix-blend-mode: normal;
+  }
+}
+  
+@media (max-width: 768px) {
+  .button-result{
+    width: 100%;
+  }
+}

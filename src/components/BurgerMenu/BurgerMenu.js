@@ -1,9 +1,9 @@
 import React from "react";
 import "./BurgerMenu.module.scss";
 import { ReactSVG } from 'react-svg';
-import telegram from '../images/Telegram.svg';
-import facebook from "../images/Facebook.svg";
-import instagram from "../images/Instagram.svg";
+import telegram from '../../images/Telegram.svg';
+import facebook from "../../images/Facebook.svg";
+import instagram from "../../images/Instagram.svg";
 
 class BurgerMenu extends React.Component {
   render() {

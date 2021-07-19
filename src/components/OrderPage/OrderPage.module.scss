@@ -1,0 +1,20 @@
+@import '../../mixins.scss';
+
+.container__full {
+    position: static;
+    display: block;
+    margin-left: 64px;
+    width: auto;
+    height: 100%;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 90%;
+        margin: auto;
+        height: auto;
+    }
+  }
+  
+
+@include order_media;
