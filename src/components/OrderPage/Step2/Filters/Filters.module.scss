@@ -1,0 +1,43 @@
+$black: #121212;
+$green: #0EC261;
+$gray:  #999999;
+$light-gray: #EEEEEE;
+@import '../../../../mixins.scss';
+
+.cars__filters {
+    margin-top: 32px;
+    margin-left: 20px;
+    display: flex;
+    &__item {
+        display: flex;
+        font-size: 14px;
+        font-weight: 300;
+        color: $gray;
+        align-items: center;
+        transition: 0.2s all;
+        font-family: "Roboto-Light";
+        margin-right: 16px;
+        &::before {
+          display: block;
+          content: "";
+          height: 14px;
+          width: 14px;
+          border: 2px solid $gray;
+          border-radius: 50%;
+          margin-right: 4px;
+        }
+        &.active,
+        &:active {
+          color: $black;
+          &::before {
+            border: 2px solid $green;
+          }
+        }
+    }
+  }
+  
+  @media(min-width:768px){
+      .models-filter{
+          margin-bottom: 48px;
+      }
+  }

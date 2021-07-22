@@ -6,11 +6,11 @@ class ButtonResult extends React.Component {
   render() {
     return (
       <>
-          <Link to="/step1">
-            <button className="button-result">
-              <p className="button-result__text">{this.props.text}</p>
+         <Link to = {this.props.link} >
+            <button className="button-result">            
+              <p className="button-result__text">{this.props.text}</p>              
             </button>
-          </Link>
+         </Link>
       </>
     );
   }

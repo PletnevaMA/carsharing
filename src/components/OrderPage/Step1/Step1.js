@@ -1,16 +1,14 @@
 import React from "react";
 import "./Step1.module.scss";
-import Logo from "../../Logo/Logo";
-import Tabs from "../Tabs/Tabs";
 import Location from "./Location/Location";
-import Result from "./Result/Result";
+import Result from "../Result/Result";
 
 class Step1 extends React.Component {
   render() {
     return (
-      <div className="container__step1">
+      <div className="container__step">
         <Location />
-        <Result />
+        <Result button = "Выбрать модель" button_link = "/order/step2"/>
       </div>
     );
   }

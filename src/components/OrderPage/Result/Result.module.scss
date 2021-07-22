@@ -2,7 +2,7 @@ $black: #121212;
 $green: #0EC261;
 $gray:  #999999;
 $light-gray: #EEEEEE;
-@import '../../../../mixins.scss';
+@import '../../../mixins.scss';
 .result {
     margin-bottom: 55px;
     display: block;
@@ -23,7 +23,7 @@ $light-gray: #EEEEEE;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      margin-bottom: 25px;
+      margin-bottom: 14px;
       font-size: 14px;
       font-weight: 300;
       font-family: "Roboto-Light";

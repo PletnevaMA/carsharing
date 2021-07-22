@@ -227,8 +227,14 @@ $mobile: 767px;
       .result {
         width: 100%;
         float:initial;
-        margin-bottom: 0;
-        
+        margin-bottom: 0;   
       }
     }
   }
+
+@mixin container_step{
+  .container_step{
+    margin-top: 47px;    
+    width: 90%;
+  }
+}

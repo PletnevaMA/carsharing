@@ -1,7 +1,6 @@
 import React from "react";
 import "./Button.module.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Step1 from "../../OrderPage/Step1/Step1";
 
 class Button extends React.Component {
   render() {

@@ -16,7 +16,7 @@ class App extends React.Component {
         <div className="container">         
         <BurgerMenu />
         <Switch>
-        <Route exact path = "/" children = {<MainPage/>}/>
+        <Route exact path = "/carsharing/" children = {<MainPage/>}/>
         <Route path = "/order" children = {<OrderPage/>}/>
         </Switch>       
       </div>

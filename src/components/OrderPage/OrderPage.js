@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../Logo/Logo";
 import Tabs from "./Tabs/Tabs";
 import Step1 from "./Step1/Step1";
+import Step2 from "./Step2/Step2";
 import './OrderPage.module.scss';
 import {
   BrowserRouter as Router,
@@ -20,6 +21,7 @@ class OrderPage extends React.Component {
           <Router>
             <Switch>
               <Route path="/order/step1" children={<Step1 />} />
+              <Route path="/order/step2" children={<Step2 />} />
             </Switch>
           </Router>
         </div>
