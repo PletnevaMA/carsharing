@@ -289,16 +289,17 @@ $mobile: 767px;
 @mixin additionaly__point {
   margin-top: 20px;
   &__title {
-    font-family: "Roboto-Light";
     font-size: 14px;
     line-height: 16px;
     padding-bottom: 20px;
+    font-weight: 300;
+    
   }
   &__item {
     padding-bottom: 14px;
-    font-family: "Roboto-Light";
     color: $gray;
     font-size: 14px;
     line-height: 16px;
+    font-weight: 300;
   }
 }
