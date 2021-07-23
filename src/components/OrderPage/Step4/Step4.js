@@ -7,7 +7,7 @@ export function Step4() {
   return (
     <div className="container__step">
       <Total />
-      <Result button="Заказать" button_link="/order/step5" />
+      <Result button="Заказать" button_link="/order/step5"  color ="green"/>
     </div>
   );
 }

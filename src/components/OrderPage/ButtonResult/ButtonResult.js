@@ -6,7 +6,7 @@ class ButtonResult extends React.Component {
   render() {
     return (
       <Link to={this.props.link}>
-        <button className="button-result">
+        <button className={`button-result ${this.props.color}`} >
           <p className="button-result__text">{this.props.text}</p>
         </button>
       </Link>

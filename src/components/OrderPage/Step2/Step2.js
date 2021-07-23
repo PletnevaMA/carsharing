@@ -9,7 +9,7 @@ class Step2 extends React.Component {
     return (
       <div className="container__step">
        <Filters />
-       <Result button = "Дополнительно" button_link = "/order/step3"/>
+       <Result button = "Дополнительно" button_link = "/order/step3"  color ="green"/>
        <CarsList />      
       </div>
     );

@@ -42,7 +42,7 @@ class Result extends React.Component {
             <span className="result__price__title">Цена: </span>
             <span className="result__price__count"> от 8 000 до 12 000 ₽</span>
           </div>
-          <ButtonResult text={this.props.button} link = {this.props.button_link} />
+          <ButtonResult text={this.props.button} link = {this.props.button_link} color = {this.props.color}/>
         </div>
       </section>
     );

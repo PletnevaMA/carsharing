@@ -8,7 +8,7 @@ class Step1 extends React.Component {
     return (
       <div className="container__step">
         <Location />
-        <Result button = "Выбрать модель" button_link = "/order/step2"/>
+        <Result button = "Выбрать модель" button_link = "/order/step2" color ="green"/>
       </div>
     );
   }

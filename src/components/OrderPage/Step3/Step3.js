@@ -7,7 +7,7 @@ export function Step3 (){
     return (
       <div className="container__step">
         <Additionaly />
-        <Result button="Итого" button_link="/order/step4" />
+        <Result button="Итого" button_link="/order/step4"  color ="green"/>
       </div>
     );
   }
