@@ -3,7 +3,8 @@ import Logo from "../Logo/Logo";
 import Tabs from "./Tabs/Tabs";
 import Step1 from "./Step1/Step1";
 import Step2 from "./Step2/Step2";
-import Step3 from './Step3/Step3';
+import {Step3} from './Step3/Step3';
+import {Step4} from './Step4/Step4';
 import './OrderPage.module.scss';
 import {
   BrowserRouter as Router,
@@ -24,6 +25,7 @@ class OrderPage extends React.Component {
               <Route path="/order/step1" children={<Step1 />} />
               <Route path="/order/step2" children={<Step2 />} />
               <Route path="/order/step3" children={<Step3 />} />
+              <Route path="/order/step4" children={<Step4 />} />
             </Switch>
           </Router>
         </div>

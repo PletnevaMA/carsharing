@@ -3,14 +3,11 @@ import "./Step3.module.scss";
 import { Additionaly } from "./Additionaly/Additionaly";
 import Result from "../Result/Result";
 
-class Step1 extends React.Component {
-  render() {
+export function Step3 (){
     return (
       <div className="container__step">
         <Additionaly />
-        <Result button="Выбрать модель" button_link="/order/step2" />
+        <Result button="Итого" button_link="/order/step4" />
       </div>
     );
   }
-}
-export default Step1;

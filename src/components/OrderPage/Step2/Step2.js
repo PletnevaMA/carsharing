@@ -9,8 +9,8 @@ class Step2 extends React.Component {
     return (
       <div className="container__step">
        <Filters />
-       <CarsList />
        <Result button = "Дополнительно" button_link = "/order/step3"/>
+       <CarsList />      
       </div>
     );
   }
