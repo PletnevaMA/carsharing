@@ -8,7 +8,7 @@ class Logo extends React.Component {
     return (
         <>
          <div className = "logo">
-             <div className = "logo__text">Need for drive</div>            
+             <div className = "logo__title">Need for drive</div>            
            <div className = "logo__map"><ReactSVG src = {map}/> Ульяновск</div>
         </div>
         </>

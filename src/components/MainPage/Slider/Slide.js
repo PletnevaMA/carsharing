@@ -6,7 +6,7 @@ class Slide extends React.Component {
     render(){
         return(
             <>
-             <img src = {this.props.img}></img><span class="overlayed"></span>
+             <img src = {this.props.img}></img><span className="overlayed"></span>
              <div className = "slide">
                  <p className = "slide__title">{this.props.title1}</p>
                  <p className = "slide__description">{this.props.description1}</p>

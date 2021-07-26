@@ -9,8 +9,8 @@ class MainPage extends React.Component {
   render() {
     return (
       <>
-        <div className="container__left">
-          <div className="container__left__content">
+        <div className="container__main-information">
+          <div className="container__main-information__content">
             <Logo />
             <HeroBlock />
             <Button text="Забронировать" />

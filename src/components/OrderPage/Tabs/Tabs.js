@@ -1,32 +1,35 @@
-import React, { useState }  from "react";
-import "./Tabs.module.scss";
-import "../Step1/Step1";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react";
+import { useDispatch } from "react-redux";
+import '../TabItem/TabItem.scss';
+import { Tabs } from "../../../const";
+import { setTab } from "../../../store/action";
+import TabItem from '../TabItem/TabItem';
 
-function Tabs(){
- 
-    const [isShowButton, setIsShowButton] = useState(true);
-    if(isShowButton){
-      return (
-        <>
-          <ul className="tabs">
-            <Link to="/order/step1">
-              <li>Местоположение</li>
-            </Link>
-            <Link to="/order/step2">
-              <li>Модель</li>
-            </Link>
-            <Link to="/order/step3">
-              <li>Дополнительно</li>
-            </Link>
-            <Link to="/order/step4">
-              <li>Итого</li>
-            </Link>
-          </ul>
-        </>
-      );
+const Tab = ({ tab }) => {
+  const dispatch = useDispatch();
+  let isDisabled = false;
+  let tabList = [];
+
+  const tabButtonClick = (e) => {
+    e.preventDefault();
+    dispatch(setTab(e.target.closest(".tabs__item").dataset.tab));
+  };
+
+  for (const [, value] of Tabs) {
+    tabList.push(
+      <TabItem
+        key={value}
+        tab={value}
+        tabButtonClick={tabButtonClick}
+        isCurrent={value === tab}
+        isDisabled={isDisabled}    
+      />
+    );
+    if (value === tab) {
+      isDisabled = true;
     }
-   
   }
+  return <ol className="tabs">{tabList}</ol>;
+};
 
-export default Tabs;
+export default Tab;
