@@ -1,0 +1,40 @@
+$black: #121212;
+$green: #0EC261;
+$gray:  #999999;
+$light-gray: #EEEEEE;
+@import '../../mixins.scss';
+
+.footer{
+    position: fixed; 
+    bottom: 32px; 
+    align-items: flex-end;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+
+    &__year {
+      position: static;
+      display: inline-block;
+      width: 40%;
+      font-family: "Roboto-Regular";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 15px;
+      color:$gray;
+    }
+
+    &__tel {
+      position: static;
+      display: inline-block;
+      margin-right: 20px;
+      font-family: "Roboto-Regular";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 15px;
+    }
+}
+ 
+@include footer_media;

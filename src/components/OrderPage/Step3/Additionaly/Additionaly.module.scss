@@ -1,0 +1,59 @@
+@import "../../../../variavle.scss";
+@import "../../../../mixins.scss";
+
+.additionaly {
+  width: 65%;
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  &__color {
+    @include additionaly__point;
+    &__item {
+      display: inline;
+      padding-right: 16px;
+    }
+    @include additionaly__radio(50%, 10px, 6px, 3px);
+  }
+
+  &__date {
+    @include additionaly__point;
+    &__margin {
+      margin-left: 10px;
+    }
+    &__input {
+      outline: none;
+      min-width: 180px;
+      width: 10%;
+      border: 0;
+      border-bottom: 1px solid $gray;
+      margin-left: 8px;
+      padding-right: 0;
+    }
+    &__block {
+      padding-bottom: 14px;
+    }
+  }
+
+  &__rate {
+    @include additionaly__point;
+    @include additionaly__radio(50%, 10px, 6px, 3px);
+  }
+
+  &__service {
+    @include additionaly__point;
+    &__tick {
+      position: absolute;
+      margin-top: -16px;
+    }
+    @include additionaly__radio(20%, 12px, 12px, 1px);
+
+    &__input {
+      &:checked ~ .additionaly__service__tick::before {
+        content: url(../../../../images/tick.svg);
+      }
+    }
+  }
+}

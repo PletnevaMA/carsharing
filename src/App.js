@@ -1,28 +1,26 @@
 import React from "react";
-import BurgerMenu from "./components/BurgerMenu";
-import Logo from "./components/Logo";
-import HeroBlock from "./components/HeroBlock";
-import Button from "./components/Button";
-import Footer from "./components/Footer";
-import Slider from "./components/Slider";
+import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
+import OrderPage from './components/OrderPage/OrderPage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import MainPage from "./MainPage";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="container">
+      <Router>
+        <div className="container">         
         <BurgerMenu />
-        <div className="container__left">
-          <div className="container__left__content">
-            <Logo />
-            <HeroBlock />
-            <Button text="Забронировать" />
-            <Footer />
-          </div>
-        </div>
-        <div className="container__slider">
-         <Slider />
-        </div>
+        <Switch>
+        <Route exact path = "/carsharing/" children = {<MainPage/>}/>
+        <Route path = "/order" children = {<OrderPage/>}/>
+        </Switch>       
       </div>
+      </Router>      
     );
   }
 }

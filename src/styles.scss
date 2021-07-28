@@ -3,6 +3,7 @@ $green: #0EC261;
 $gray:  #999999;
 $light-gray: #EEEEEE;
 @import './mixins.scss';
+
 @font-face { 
   font-family: 'Roboto-Medium'; 
   src: url('./fonts/Roboto-Medium.ttf');
@@ -31,6 +32,10 @@ $light-gray: #EEEEEE;
   font-style: normal; 
 }
 
+Link {
+  color: $black;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,10 +51,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     font-weight: inherit;
     font-style: inherit;
     font-size: 100%;
-    font-family: inherit;
+    font-family: "Roboto-Light";
     vertical-align: baseline;
 }
-/* remember to define focus styles! */
 :focus {
     outline: 0;
 }
@@ -61,7 +65,6 @@ body {
 ol, ul {
     list-style: none;
 }
-/* tables still need 'cellspacing="0"' in the markup */
 table {
     border-collapse: separate;
     border-spacing: 0;
@@ -111,10 +114,10 @@ body{
     flex: 1;
     height: 100%;
   }
+
 }
 
 @include styles_media;
-
 
 
 
