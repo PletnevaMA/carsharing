@@ -1,0 +1,47 @@
+$black: #121212;
+$green: #0ec261;
+$gray: #999999;
+$light-gray: #eeeeee;
+.tabs {
+  
+  margin-top: 47px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 16px 10px 16px;
+
+  &__item {
+    display: inline;
+    margin-right: 36px;
+    font-family: "Roboto-Bold";
+   
+    font-size: 14px;
+    line-height: 16px;
+    width: auto;
+    color: $gray;
+    border: none;
+    &:not(:last-of-type) {
+    &::after {
+      content: "";
+      position: absolute;
+      margin: 0 16px;
+      border: 8px solid transparent;
+      border-left: 8px solid $gray;
+    }  
+  }
+   
+  }
+  &__button {
+    padding: 0;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+   
+    &__active {
+      color: $green;
+    }
+    &__disabled {
+      color: $gray;
+    }
+  }
+}

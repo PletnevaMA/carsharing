@@ -3,6 +3,24 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./styles.scss";
 import "./mixins.scss";
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-var mountNode = document.getElementById("app");
-ReactDOM.render(<App />, mountNode);
+
+import reducer from './store/reduser';
+
+const store = createStore(reducer);
+
+ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+  
+      </Provider>
+    </React.StrictMode>,
+    document.getElementById('app')
+  );
+  
