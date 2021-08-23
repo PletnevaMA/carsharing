@@ -6,7 +6,10 @@ const TextInput = ({
   input: { name, label },
   labelclass, 
   inputclass,
-  placeholder
+  onChange,
+  placeholder,
+  datalistName,
+  type
   
 }) => {
   const inputref = useRef(null);
@@ -26,13 +29,16 @@ const TextInput = ({
       </label>
       <input
         className={inputclass}
+        type = {type}
         name={name}
-        id={name}
         value={value}
         placeholder={placeholder}
-        onChange={inputChange}
+        autoComplete="off"
+        onChange= {inputChange}
         required
         ref={inputref}
+        list = {datalistName}
+       
       />
     </>
   );

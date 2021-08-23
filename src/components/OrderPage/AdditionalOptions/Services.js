@@ -30,7 +30,7 @@ export const Services = () => {
          <CheckBoxInput
               key={s.name}
               name={s.name}
-              typeinput = "radio"
+              typeinput = "checkbox"
               clas = "additionaly__service"
               label={s.label}
               setActive={setServicesValue}

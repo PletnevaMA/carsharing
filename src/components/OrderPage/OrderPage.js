@@ -6,37 +6,33 @@ import RecordPositionUser from "./RecordPositionUser/RecordPositionUser";
 import CarSelection from "./CarSelection/CarSelection";
 import AdditionalOptions from "./AdditionalOptions/AdditionalOptions";
 import CheckingOrderData from "./CheckingOrderData/CheckingOrderData";
-import {Tabs} from '../../const';
+import OrderCompleted from './OrderCompleted/OrderCompleted';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import { Tabs, Path } from "../../const";
 import "./OrderPage.module.scss";
 
 const OrderPage = ({ tab }) => {
-  const setTab = (tab) => {
-    switch (tab) {
-      case Tabs.get("POSITION"):
-        return <RecordPositionUser />;
-      case Tabs.get("CAR"):
-        return <CarSelection />;
-      case Tabs.get("OPTIONS"):
-        return <AdditionalOptions />;
-      case Tabs.get("ORDER"):
-        return <CheckingOrderData />;
-      default:
-        return <RecordPositionUser />;
-    }
-  };
+  
   return (
     <div className="container__full">
       <div className="container__full__content">
         <Logo />
-        <Tab tab={tab} />
-        {setTab(tab)}
+        <Tab tab={tab} />             
       </div>
+      <Switch>
+          <Route path={Path.POSITION} render={() => <RecordPositionUser />} />
+          <Route path={Path.CAR} render={() => <CarSelection />} />
+          <Route path={Path.OPTIONS} render={() => <AdditionalOptions />} />
+          <Route path={Path.ORDER} render={() => <CheckingOrderData />} />
+          <Route path={Path.CHECK} render={() => <OrderCompleted />} />
+        </Switch>
     </div>
   );
 };
 
 const stateProps = ({ tab }) => ({
-  tab
-})
+  tab,
+});
 
 export default connect(stateProps)(OrderPage);

@@ -14,6 +14,12 @@
         margin: auto;
         height: auto;
     }
+    @mixin container_step{
+      .container_step{
+        margin-top: 47px;   
+        width: 90%;
+      }
+    }
   }
   
 

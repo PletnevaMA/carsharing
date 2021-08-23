@@ -6,7 +6,7 @@ class Button extends React.Component {
   render() {
     return (
       <div>
-          <Link to="/order/step1">
+          <Link to="/order/position">
             <button className="button-standart">
               <p className="button-standart__text">{this.props.text}</p>
             </button>

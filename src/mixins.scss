@@ -237,8 +237,9 @@ $mobile: 767px;
   }
 
 @mixin container_step{
-  .container_step{
-    margin-top: 47px;    
+  .container__step{
+    margin-top: 27px; 
+    margin-left: 80px;   
     width: 90%;
   }
 }

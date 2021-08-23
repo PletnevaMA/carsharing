@@ -3,14 +3,16 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./styles.scss";
 import "./mixins.scss";
-import { createStore } from 'redux';
+import { createStore, applyMiddleware} from 'redux'; 
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk'; 
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 
 import reducer from './store/reduser';
 
-const store = createStore(reducer);
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.render(
     <React.StrictMode>

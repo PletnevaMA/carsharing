@@ -23,7 +23,7 @@ export const Rate = () => {
           <li className="additionaly__rate__item">
             <FilterInput
               key={r.name}
-              name={r.name}
+              name={r.label}
               typeinput = "radio"
               clas = "additionaly__rate"
               label={r.label}
