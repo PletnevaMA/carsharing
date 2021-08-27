@@ -11,12 +11,12 @@ const RecordPositionUser = () => {
   return (
     <div className="container__step">
       <LocationUser/>
-      <CheckOrder
+      <CheckOrder      
         button="Выбрать модель"
         button_link={Path.CAR}
         color="green"
-        tab = {Tabs.get("POSITION")}
-        isActive = {isActive}
+        isActive={isActive}
+        tab = {Tabs.get("CAR")}
       />
     </div>
   );

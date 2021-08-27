@@ -1,0 +1,8 @@
+@import '../../variavle.scss';
+.menu__item__icon {
+    &:hover {
+        svg path{
+            fill: $green;
+        }
+    }
+}

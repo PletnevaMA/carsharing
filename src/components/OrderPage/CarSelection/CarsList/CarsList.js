@@ -10,7 +10,6 @@ const CarsList =() => {
     const [price, setActivePrice] = useState(useSelector((state) => state.price));
     const [image, setActiveImage] = useState(useSelector((state) => state.image));
     const [number, setActiveNumber] = useState(useSelector((state) => state.carNumber));
-    const isActive = useSelector((state) => state.isActive);
     const setCarValue = (car) => setActiveCar(car);
     const setCarPrice = (price) => setActivePrice(price);
     const setCarImage = (image) => setActiveImage(image);
@@ -35,7 +34,7 @@ const CarsList =() => {
       }
     }, [activeCar])
     return (
-      <div className="step__content">
+      
         <div className="carslist">          
           {cars.map((car) =>{
             return (
@@ -55,7 +54,6 @@ const CarsList =() => {
             );
           })}
         </div>
-      </div>
     );
   
 }

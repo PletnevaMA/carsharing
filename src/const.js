@@ -86,6 +86,8 @@ const ServicesInput = [
 ]
 const Action= {
     SET_TAB: "setTab",
+    ADD_VISITED_TAB: "addVisitedTab",
+    SET_IS_ORDERED: "setIsOrdered",
     SET_ACTIVE: "isActive",
     SET_POSITION: "setPosition",
     SET_ADDRESS: "setAddress",
@@ -96,13 +98,17 @@ const Action= {
     SET_NUMBER: "setCarNumber",
     SET_FILTER: "setFilter",
     SET_COLOR: "setColor",
-    SET_DATE: "setDate",
+    SET_START_DATE : "setStartDate",
+    SET_FINISH_DATE : "setFinishDate",    
     SET_RATE: "setRate",
     SET_SERVICES: "setServices",
     GET_CITIES : "getCities",
     GET_POINTS : "getPoints",
     GET_CARS : "getCars",
-    CREATE_PLACEMARK : "createPlacemark"
+    GET_RATES: "getRates",
+    CREATE_PLACEMARK : "createPlacemark",
+    GET_ORDER_ID: "getOrderId",
+    ADD_ORDER: "addOrder"
 };
 
 const Colors = {

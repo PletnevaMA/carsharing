@@ -18,7 +18,7 @@ const AdditionalOptions = () => {
         <Rate />
         <Services />
       </div>
-      <CheckOrder button="Итого" button_link={Path.ORDER} color="green" tab = {Tabs.get("OPTIONS")} isActive = {isActive}/>
+      <CheckOrder button="Итого" button_link={Path.ORDER} color="green" tab = {Tabs.get("ORDER")} isActive = {isActive}/>
     </div>
   );
 }

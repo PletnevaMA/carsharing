@@ -11,9 +11,11 @@ const CarSelection = () => {
   const isActive = useSelector((state) => state.isActive);
   return (
     <div className="container__step">
-      <Filters />
-      <CheckOrder button="Дополнительно" button_link={Path.OPTIONS} color="green" tab = {Tabs.get("CAR")} isActive = {isActive}/>
+      <div className="step__content">        
+      <Filters />     
       <CarsList />
+      </div>
+      <CheckOrder button="Дополнительно" button_link={Path.OPTIONS} color="green" isActive = {isActive} tab = {Tabs.get("OPTIONS")}/>
     </div>
   );
 };

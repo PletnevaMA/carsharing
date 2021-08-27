@@ -11,7 +11,7 @@ $mobile: 767px;
       height: 32px;
       margin-top: 16px;
       justify-content:start; 
-      &__text{
+      &__title{
         margin-right: 16px;
         margin-left: auto;
       }   
@@ -168,7 +168,7 @@ $mobile: 767px;
 
 @mixin  slider_media{
   @media (max-width: $mobile, $tablet) {
-    .slider{
+    .container__slider{
      display: none;
      }
   } 
@@ -176,22 +176,22 @@ $mobile: 767px;
 
 @mixin styles_media{
   @media (max-width: $desktop_min){
-    .container__left{
+    .container__main-information{
       width: 53.7%;
     }  
   }
   
   @media (max-width: $tablet){
-    .container__rigth{
+    .container__slider{
       display: none;
     }  
-    .container__left{
+    .container__main-information{
       width: 100%;
     }
   }
     
   @media (max-width: $mobile){
-    .container__left{
+    .container__main-information{
       width: 100%;
       margin-left: 0;
       &__content{
@@ -201,7 +201,7 @@ $mobile: 767px;
         margin: 0;
       }  
     }  
-    .container__rigth{
+    .container__slider{
       display: none;
     }
   }
@@ -238,9 +238,17 @@ $mobile: 767px;
 
 @mixin container_step{
   .container__step{
-    margin-top: 27px; 
-    margin-left: 80px;   
-    width: 90%;
+    margin-top: 27px;  
+    margin-left: 80px;;
+    width: 100%;
+    @media (max-width: $mobile){
+      margin-top: 0;  
+      margin-left: 0;
+    }
+    @media (max-width: $tablet){
+      margin-top: 0;  
+      margin-left: 20px;
+    }
   }
 }
 

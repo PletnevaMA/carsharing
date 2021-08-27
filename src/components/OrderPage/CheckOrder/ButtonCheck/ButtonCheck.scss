@@ -19,7 +19,12 @@
     color:$light-gray;
   }
   
-
+  &:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;  
+    border:none;    
+  }
   &:hover {
     filter: brightness(90%);
   }
@@ -31,14 +36,7 @@
   &::after {
     filter: brightness(90%);
   }
-
-  &__disabled{
-    opacity: 0.6;
-    cursor: not-allowed;
-    border:none;
-  
-    background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
-  }
+ 
 }
 .green{
   background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);

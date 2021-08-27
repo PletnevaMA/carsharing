@@ -5,6 +5,16 @@ const setTab = (tab) => ({
     payload: tab
 });
 
+const addVisitedTab = (tab) => ({
+  type: Action.ADD_VISITED_TAB,
+  payload: tab
+});
+
+const setIsOrdered = (bool) => ({
+  type: Action.SET_IS_ORDERED,
+  payload: bool
+});
+
 const setActive = (active) => ({
   type: Action.SET_ACTIVE,
   payload: active
@@ -62,11 +72,15 @@ const setServices = (services) => ({
     payload: services
 });
 
-const setDate = (date) => ({
-    type: Action.SET_DATE,
+const setStartDate = (date) => ({
+    type: Action.SET_START_DATE,
     payload: date
 });
 
+const setFinishDate = (date) => ({
+  type: Action.SET_FINISH_DATE,
+  payload: date
+});
 
 const getCities = (response) => ({
   type: Action.GET_CITIES,
@@ -83,10 +97,24 @@ const getCars = (response) => ({
   payload: response
 })
 
+const getRates = (response) => ({
+  type: Action.GET_RATES, 
+  payload: response
+})
+
+const getOrderId = (id) => ({
+  type: Action.GET_ORDER_ID, 
+  payload: id
+})
+
+
+
 
   
 export {
     setTab,
+    addVisitedTab,
+    setIsOrdered,
     setActive,
     setPosition,
     setAddress,
@@ -99,8 +127,11 @@ export {
     setColor,
     setRate,
     setServices,
-    setDate, 
+    setStartDate, 
+    setFinishDate,
     getCities,
     getPoints,
-    getCars
-  }
+    getCars,
+    getRates,
+    getOrderId
+}

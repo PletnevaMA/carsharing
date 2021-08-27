@@ -8,16 +8,14 @@ const TabItem = ({ tab, link, tabButtonClick, isCurrent, available, visit}) => {
     <li
       id="button"
       className="tabs__item"
-      data-tab={tab}
-      onClick={tabButtonClick}
+      data-tab = {tab}
+      onClick = {tabButtonClick}
     >
       <Link to={link}>
-        <button
-          className={`tabs__button ${isCurrent ? "tabs__button__active" : ""} ${
-            available ? "tabs__button__notdisable" : "tabs__button__disable"
-          } ${visit ? "tabs__button__notdisable" : "tabs__button__disable"}`}
+        <button        
+          className = {`tabs__button ${isCurrent ? "tabs__button__active" : "" }`}
           type="button"
-          disabled={!available}
+          disabled={!(isCurrent || available || visit)}          
         >
           {TitleTabs[tab]}
         </button>

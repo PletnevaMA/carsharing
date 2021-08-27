@@ -35,8 +35,9 @@ $light-gray: #eeeeee;
     background-color: transparent;
     cursor: pointer;
     border: none;    
+    color: $black;   
      
-    &__disable {
+    &:disabled {
       color: $gray;
     }
     &__notdisable {

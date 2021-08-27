@@ -3,12 +3,12 @@
 
 @include container_step;
 .additionaly {
-  width: 65%;
+  width: 60%;
   float: left;
   margin-top: 20px;
-  margin-left: 20px;
+  padding-left: 20px;
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90%;
   }
   &__color {
     @include additionaly__point;

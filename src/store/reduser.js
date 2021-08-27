@@ -9,6 +9,8 @@ import {
 
 const initialState = {
   tab: Tabs.get("POSITION"),
+  visitedTab: [Tabs.get("POSITION")],
+  isOrdered: false,
   isActive: false,
   city: "",
   point: "",
@@ -21,6 +23,7 @@ const initialState = {
   cities: [],
   points: [],
   cars: [],
+  rates: [],
   filter: CarFilters[0].label,
   color: Colors.ALL_COLOR,
   rate: RateInput[0].label,
@@ -28,6 +31,7 @@ const initialState = {
   startDate: "",
   finishDate: "",
   placemarks: [],
+  orderId: "",
 };
 
 const reducer = (state = initialState, action) => {
@@ -37,12 +41,22 @@ const reducer = (state = initialState, action) => {
         ...state,
         tab: action.payload,
       };
+    case Action.ADD_VISITED_TAB:
+      return {
+        ...state,
+        visitedTab: [...state.visitedTab, action.payload],
+      };
+    case Action.SET_IS_ORDERED:
+      return {
+        ...state,
+        isOrdered: action.payload,
+      };
 
-      case Action.SET_ACTIVE:
-        return {
-          ...state,
-          isActive: action.payload,
-        };
+    case Action.SET_ACTIVE:
+      return {
+        ...state,
+        isActive: action.payload,
+      };
     case Action.SET_POSITION:
       return {
         ...state,
@@ -56,12 +70,12 @@ const reducer = (state = initialState, action) => {
         address: action.payload,
       };
 
-      case Action.SET_COORD:
-        return {
-          ...state,
-          coord: action.payload,
-        };
-  
+    case Action.SET_COORD:
+      return {
+        ...state,
+        coord: action.payload,
+      };
+
     case Action.SET_CAR:
       return {
         ...state,
@@ -108,11 +122,15 @@ const reducer = (state = initialState, action) => {
         services: action.payload,
       };
 
-    case Action.SET_DATE:
+    case Action.SET_START_DATE:
       return {
         ...state,
-        startDate: action.payload.startDate,
-        finishDate: action.payload.finishDate,
+        startDate: action.payload,
+      };
+    case Action.SET_FINISH_DATE:
+      return {
+        ...state,
+        finishDate: action.payload,
       };
 
     case Action.GET_CITIES:
@@ -132,10 +150,20 @@ const reducer = (state = initialState, action) => {
         ...state,
         cars: action.payload,
       };
+    case Action.GET_RATES:
+      return {
+        ...state,
+        rates: action.payload,
+      };
+    case Action.GET_ORDER_ID:
+      return {
+        ...state,
+        orderId: action.payload,
+      };
+   
     default: {
       return state;
     }
-    
   }
 };
 

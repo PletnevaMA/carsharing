@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setRate } from "../../../store/action";
+import { setRate} from "../../../store/action";
+import { getRateFetch } from "../../../store/api";
 import { RateInput } from "../../../const";
 import FilterInput from "../FilterInput";
 
@@ -9,9 +10,11 @@ export const Rate = () => {
   const setRateValue = (rate) => {
     setActiveRate(rate);
   };
+  const rates = useSelector((state) => state.rates);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(getRateFetch());
     setActiveRate(activeRate);
     dispatch(setRate(activeRate));
   }, [activeRate]);
@@ -19,14 +22,14 @@ export const Rate = () => {
     <fieldset className="additionaly__rate">
       <legend className="additionaly__rate__title">Тариф</legend>
       <ul className="additionaly__rate__list">
-        {RateInput.map((r) => (
+        {rates.map((r) => (
           <li className="additionaly__rate__item">
             <FilterInput
-              key={r.name}
-              name={r.label}
+              key={r.id}
+              name={r.rateTypeId.name}
               typeinput = "radio"
               clas = "additionaly__rate"
-              label={r.label}
+              label={r.rateTypeId.name}
               setActive={setRateValue}
               filter={activeRate}
             />

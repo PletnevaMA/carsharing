@@ -1,43 +1,39 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setDate, setActive } from "../../../store/action";
-import { DateInput } from "../../../const";
-import TextInput from "../TextInput";
+import { setStartDate, setFinishDate, setActive } from "../../../store/action";
+import DateTimePicker from "react-datetime-picker";
+import "./DateRent.scss";
 
 export const DateRent = () => {
-  const [actionDate, setActionDate] = useState({
-    startDate: useSelector((state) => state.startDate),
-    finishDate: useSelector((state) => state.finishDate),
-  });
-  const isActive = useSelector((state) => state.isActive);
-  const setDateValue = (date) => {
-    setActionDate({ ...actionDate, [date.name]: date.value });
-  };
+  const [startDate, setStartDateValue] = useState(
+    useSelector((state) => state.startDate)
+  );
+  const [finishDate, setFinishDateValue] = useState(
+    useSelector((state) => state.finishDate)
+  );
+
   const dispatch = useDispatch();
-  useEffect(() => {
-    setActionDate(actionDate);
-    dispatch(setDate(actionDate));
-    if (actionDate.startDate.length > 0 && actionDate.finishDate.length > 0){
-      dispatch(setActive(true));
-    }
-  }, [actionDate]);
+   useEffect(() => {
+   dispatch(setStartDate(startDate.toLocaleString('en-GB')));
+   dispatch(setFinishDate(finishDate.toLocaleString('en-GB')));
+   if (startDate.toLocaleString('en-GB').length && finishDate.toLocaleString('en-GB').length) {
+    dispatch(setActive(true));
+   }  
+  }, [startDate, finishDate]); 
+
   return (
     <fieldset className="additionaly__date">
       <legend className="additionaly__date__title">Дата аренды</legend>
-      {DateInput.map((d) => (
-        <div className="additionaly__date__block">
-          <TextInput
-            key={d.name}    
-            value={actionDate[d.name]}           
-            setValue={setDateValue}
-            input={d}                     
-            labelclass="additionaly__date__title"
-            inputclass="additionaly__date__input"
-            placeholder="Введите дату и время"
-            type = "date"
-          />
+      <div className="additionaly__date__block">
+        <div className="additionaly__date__start">
+          <label className="additionaly__date__title">C</label>
+          <DateTimePicker  value={startDate} format = "y-MM-dd H:mm" calendarIcon = {null} onChange={setStartDateValue}/>
         </div>
-      ))}
+        <div className="additionaly__date__finish">
+          <label className="additionaly__date__title">По</label>
+          <DateTimePicker  value={finishDate} format = "y-MM-dd H:mm" calendarIcon = {null} onChange={setFinishDateValue}/>
+        </div>
+      </div>
     </fieldset>
   );
 };
