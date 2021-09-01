@@ -1,8 +1,7 @@
 import React from "react";
 
 const FilterInput = ({ name, typeinput, clas, label, setActive, filter }) => {
-  const changeHandler = (e) => setActive(label);
- 
+  const changeHandler = () => setActive(label);
   return (
     <>    
       <input

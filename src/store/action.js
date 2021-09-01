@@ -39,6 +39,11 @@ const setCar = (car) => ({
     payload: car
 });
 
+const setCarName = (car) => ({
+  type: Action.SET_CAR_NAME,
+  payload: car
+});
+
 const setPrice = (price) => ({
   type: Action.SET_PRICE,
   payload: price
@@ -107,6 +112,10 @@ const getOrderId = (id) => ({
   payload: id
 })
 
+const getCategories = (id) => ({
+  type: Action.GET_CATEGORIES, 
+  payload: id
+})
 
 
 
@@ -120,6 +129,7 @@ export {
     setAddress,
     setCoord,
     setCar,
+    setCarName,
     setPrice,
     setImage,
     setNumber,
@@ -133,5 +143,6 @@ export {
     getPoints,
     getCars,
     getRates,
-    getOrderId
-}
+    getOrderId,
+    getCategories
+  }

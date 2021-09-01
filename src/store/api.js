@@ -1,6 +1,6 @@
 
 import {API_URL} from '../const';
-import { getCities, getPoints, getCars, getRates, getOrderId} from "./action.js";
+import { getCities, getPoints, getCars, getRates, getOrderId, getCategories} from "./action.js";
 
 const getCitiesFetch = () => async (dispatch) => {
   try{
@@ -33,7 +33,7 @@ const getPointsFetch = () => async (dispatch) => {
 
 const getCarsFetch = () => async (dispatch) => {
   try {
-    await fetch(`${API_URL}db/car?&limit=8` , {
+    await fetch(`${API_URL}db/car?&limit=30` , {
       headers: {
         "X-Api-Factory-Application-Id": "5e25c641099b810b946c5d5b",
       },
@@ -54,6 +54,20 @@ const getRateFetch = () => async (dispatch) => {
     })
     .then((res) => res.json())      
     .then((res) => dispatch(getRates(res.data)));
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+const getCategoriesFetch = () => async (dispatch) => {
+  try {
+    await fetch(`${API_URL}db/category` , {
+      headers: {
+        "X-Api-Factory-Application-Id": "5e25c641099b810b946c5d5b",
+      },
+    })
+    .then((res) => res.json())      
+    .then((res) => dispatch(getCategories(res.data)));
   } catch (e) {
     console.error(e);
   }
@@ -83,5 +97,6 @@ export {
   getPointsFetch,
   getCarsFetch,
   getRateFetch,
-  postOrderFetch
+  postOrderFetch,
+  getCategoriesFetch
 }

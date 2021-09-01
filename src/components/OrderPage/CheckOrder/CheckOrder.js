@@ -8,7 +8,7 @@ import { setActive, setTab, addVisitedTab, setIsOrdered } from "../../../store/a
 const CheckOrder = (props) => {
   const city =  useSelector((state) => state.city);
   const point = useSelector((state) => state.point);
-  const car = useSelector((state) => state.car);
+  const car = useSelector((state) => state.carName);
   const color = useSelector((state) => state.color);
   const rate = useSelector((state) => state.rate);
   const startDate = useSelector((state) => state.startDate);

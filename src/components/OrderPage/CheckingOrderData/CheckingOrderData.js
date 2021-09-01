@@ -84,8 +84,6 @@ const CheckingOrderData = () => {
         : false,
       isRightWheel: services.includes("Правый руль, 1600₽") ? true : false,
     };
-    console.log(orderReady);
-    setOrder(orderReady);
   };
 
   return (

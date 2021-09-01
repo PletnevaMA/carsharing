@@ -47,12 +47,12 @@
     @include additionaly__point;
     &__tick {
       position: absolute;
-      margin-top: -16px;
+      margin-top: -20px;
     }
     @include additionaly__radio(20%, 12px, 12px, 1px);
 
     &__input {
-      &:checked ~ .additionaly__service__tick::before {
+      &:checked ~ .additionaly__service__label::before {
         content: url(../../../images/tick.svg);
       }
     }

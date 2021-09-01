@@ -93,6 +93,9 @@ const Action= {
     SET_ADDRESS: "setAddress",
     SET_COORD: "setCoord",
     SET_CAR: "setCar",
+    SET_CATEGORY_NAME: "setCategoryName",
+    SET_CATEGORY_ID: "setCategoryId",
+    SET_CAR_NAME: "setCarName",
     SET_PRICE : "setPrice",
     SET_IMAGE: "setImage",
     SET_NUMBER: "setCarNumber",
@@ -106,6 +109,7 @@ const Action= {
     GET_POINTS : "getPoints",
     GET_CARS : "getCars",
     GET_RATES: "getRates",
+    GET_CATEGORIES: "getCategories",
     CREATE_PLACEMARK : "createPlacemark",
     GET_ORDER_ID: "getOrderId",
     ADD_ORDER: "addOrder"

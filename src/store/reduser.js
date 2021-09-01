@@ -17,6 +17,7 @@ const initialState = {
   address: "",
   coord: [],
   car: "",
+  carName: "",
   price: "",
   image: "",
   carNumber: "",
@@ -24,7 +25,7 @@ const initialState = {
   points: [],
   cars: [],
   rates: [],
-  filter: CarFilters[0].label,
+  filter: "",
   color: Colors.ALL_COLOR,
   rate: RateInput[0].label,
   services: [ServicesInput[0].label],
@@ -32,6 +33,9 @@ const initialState = {
   finishDate: "",
   placemarks: [],
   orderId: "",
+  categories: [],
+  categoryName: "",
+  categoryId: "",
 };
 
 const reducer = (state = initialState, action) => {
@@ -80,6 +84,31 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         car: action.payload,
+      };
+    case Action.SET_CAR_NAME:
+      return {
+        ...state,
+        carName: action.payload,
+      };
+    case Action.SET_CATEGORY_NAME:
+      return {
+        ...state,
+        categoryName: action.payload,
+      };
+    case Action.SET_CATEGORY_ID:
+      return {
+        ...state,
+        categoryId: action.payload,
+      };
+    case Action.SET_CAR:
+      return {
+        ...state,
+        car: action.payload,
+      };
+    case Action.SET_CAR_NAME:
+      return {
+        ...state,
+        carName: action.payload,
       };
 
     case Action.SET_PRICE:
@@ -155,12 +184,17 @@ const reducer = (state = initialState, action) => {
         ...state,
         rates: action.payload,
       };
+      case Action.GET_CATEGORIES:
+      return {
+        ...state,
+        categories: action.payload,
+      };
     case Action.GET_ORDER_ID:
       return {
         ...state,
         orderId: action.payload,
       };
-   
+
     default: {
       return state;
     }
