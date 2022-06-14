@@ -4,9 +4,12 @@ import {ColorCar} from './ColorCar';
 import {DateRent} from './DateRent';
 import {Services} from './Services';
 import CheckOrder from "../CheckOrder/CheckOrder";
+import {Path, Tabs} from '../../../const';
 import {Rate} from './Rate';
+import { useSelector } from "react-redux";
 
 const AdditionalOptions = () => {
+  const isActive = useSelector((state) => state.isActive);
   return (
     <div className="container__step">
       <div className="additionaly">
@@ -15,7 +18,7 @@ const AdditionalOptions = () => {
         <Rate />
         <Services />
       </div>
-      <CheckOrder button="Итого" button_link="/order/step4" color="green" />
+      <CheckOrder button="Итого" button_link={Path.ORDER} color="green" tab = {Tabs.get("ORDER")} isActive = {isActive}/>
     </div>
   );
 }

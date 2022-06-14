@@ -1,8 +1,23 @@
-import { Action } from "../const";
+import { Action} from "../const";
 
 const setTab = (tab) => ({
     type: Action.SET_TAB,
     payload: tab
+});
+
+const addVisitedTab = (tab) => ({
+  type: Action.ADD_VISITED_TAB,
+  payload: tab
+});
+
+const setIsOrdered = (bool) => ({
+  type: Action.SET_IS_ORDERED,
+  payload: bool
+});
+
+const setActive = (active) => ({
+  type: Action.SET_ACTIVE,
+  payload: active
 });
 
 const setPosition = (position) => ({
@@ -10,11 +25,38 @@ const setPosition = (position) => ({
     payload: position
 });
 
+const setAddress = (address) => ({
+  type: Action.SET_ADDRESS,
+  payload: address
+});
+const setCoord = (coord) => ({
+  type: Action.SET_COORD,
+  payload: coord
+});
+
 const setCar = (car) => ({
     type: Action.SET_CAR,
     payload: car
 });
 
+const setCarName = (car) => ({
+  type: Action.SET_CAR_NAME,
+  payload: car
+});
+
+const setPrice = (price) => ({
+  type: Action.SET_PRICE,
+  payload: price
+});
+const setImage = (image) => ({
+  type: Action.SET_IMAGE,
+  payload: image
+});
+
+const setNumber = (number) => ({
+  type: Action.SET_NUMBER,
+  payload: number
+});
 const setFilter = (filter) => ({
     type: Action.SET_FILTER,
     payload: filter
@@ -35,19 +77,72 @@ const setServices = (services) => ({
     payload: services
 });
 
-const setDate = (date) => ({
-    type: Action.SET_DATE,
+const setStartDate = (date) => ({
+    type: Action.SET_START_DATE,
     payload: date
 });
 
+const setFinishDate = (date) => ({
+  type: Action.SET_FINISH_DATE,
+  payload: date
+});
 
+const getCities = (response) => ({
+  type: Action.GET_CITIES,
+  payload: response
+})
+
+const getPoints = (response) => ({
+  type: Action.GET_POINTS,
+  payload: response
+})
+
+const getCars = (response) => ({
+  type: Action.GET_CARS, 
+  payload: response
+})
+
+const getRates = (response) => ({
+  type: Action.GET_RATES, 
+  payload: response
+})
+
+const getOrderId = (id) => ({
+  type: Action.GET_ORDER_ID, 
+  payload: id
+})
+
+const getCategories = (id) => ({
+  type: Action.GET_CATEGORIES, 
+  payload: id
+})
+
+
+
+  
 export {
     setTab,
+    addVisitedTab,
+    setIsOrdered,
+    setActive,
     setPosition,
+    setAddress,
+    setCoord,
     setCar,
+    setCarName,
+    setPrice,
+    setImage,
+    setNumber,
     setFilter,
     setColor,
     setRate,
     setServices,
-    setDate
-}
+    setStartDate, 
+    setFinishDate,
+    getCities,
+    getPoints,
+    getCars,
+    getRates,
+    getOrderId,
+    getCategories
+  }

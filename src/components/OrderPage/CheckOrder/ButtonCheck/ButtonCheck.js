@@ -1,13 +1,19 @@
 import React from "react";
 import "./ButtonCheck.scss";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const ButtonCheck = (props) => {
-  return (
-    <Link to={props.link}>
-      <button className={`button-result ${props.color}`}>
-        <p className="button-result__text">{props.text}</p>
-      </button>
+
+const ButtonCheck = (props) => {  
+ 
+  return (   
+    <Link to={props.button_link} onClick = {props.tabButtonClick}> 
+    <button
+      className={`button-result ${props.color} `}
+      type="submit"
+      disabled = {!props.isActive}
+    >
+      <p className="button-result__text">{props.button} </p>
+    </button>
     </Link>
   );
 };

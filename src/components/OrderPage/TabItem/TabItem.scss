@@ -2,8 +2,7 @@ $black: #121212;
 $green: #0ec261;
 $gray: #999999;
 $light-gray: #eeeeee;
-.tabs {
-  
+.tabs {  
   margin-top: 47px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -35,13 +34,18 @@ $light-gray: #eeeeee;
     font-weight: bold;
     background-color: transparent;
     cursor: pointer;
-    border: none;
-   
-    &__active {
-      color: $green;
-    }
-    &__disabled {
+    border: none;    
+    color: $black;   
+     
+    &:disabled {
       color: $gray;
     }
+    &__notdisable {
+      color: $black;
+    }
+    
+    &__active {
+      color: $green;
+    } 
   }
 }

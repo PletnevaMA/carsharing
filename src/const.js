@@ -1,11 +1,11 @@
 const Path = {
     MAIN: '/carsharing/',
     ORDERPAGE: '/order',
-    CHECK: '/order/step5',
-    POSITION: '/order/step1',
-    CAR: '/order/step2',
-    OPTIONS: '/order/step3',
-    ORDER: '/order/step4',
+    CHECK: '/order/complete',
+    POSITION: '/order/position',
+    CAR: '/order/car',
+    OPTIONS: '/order/options',
+    ORDER: '/order/order',
 }
 const Tabs = new Map([
     ['POSITION', 'position'],
@@ -28,7 +28,7 @@ const PositionPosints = [
         label: "Город"
     },
     {
-        name: "pickpoint",     
+        name: "point",     
         label: "Пункт выдачи"
     }
   ];
@@ -86,20 +86,41 @@ const ServicesInput = [
 ]
 const Action= {
     SET_TAB: "setTab",
+    ADD_VISITED_TAB: "addVisitedTab",
+    SET_IS_ORDERED: "setIsOrdered",
+    SET_ACTIVE: "isActive",
     SET_POSITION: "setPosition",
+    SET_ADDRESS: "setAddress",
+    SET_COORD: "setCoord",
     SET_CAR: "setCar",
+    SET_CATEGORY_NAME: "setCategoryName",
+    SET_CATEGORY_ID: "setCategoryId",
+    SET_CAR_NAME: "setCarName",
+    SET_PRICE : "setPrice",
+    SET_IMAGE: "setImage",
+    SET_NUMBER: "setCarNumber",
     SET_FILTER: "setFilter",
     SET_COLOR: "setColor",
-    SET_DATE: "setDate",
+    SET_START_DATE : "setStartDate",
+    SET_FINISH_DATE : "setFinishDate",    
     SET_RATE: "setRate",
     SET_SERVICES: "setServices",
+    GET_CITIES : "getCities",
+    GET_POINTS : "getPoints",
+    GET_CARS : "getCars",
+    GET_RATES: "getRates",
+    GET_CATEGORIES: "getCategories",
+    CREATE_PLACEMARK : "createPlacemark",
+    GET_ORDER_ID: "getOrderId",
+    ADD_ORDER: "addOrder"
 };
 
 const Colors = {
-    ALL_COLOR: "all-color",
-    RED: "red",
-    BLUE: "blue"
+    ALL_COLOR: "Любой цвет",
+    RED: "Красный",
+    BLUE: "Голубой"
 }
+const API_URL = "https://api-factory.simbirsoft1.com/api/";
 
 export {
     Path,
@@ -111,5 +132,6 @@ export {
     CarFilters,
     Colors,
     RateInput,
-    ServicesInput
+    ServicesInput,
+    API_URL
 }

@@ -10,14 +10,16 @@ export const Services = () => {
     useSelector((state) => state.services)
   );
   const setServicesValue = (point) => {
-    const index = actionServices.indexOf(point);
-    actionServices.includes(point)
-      ? actionServices.splice(index, 1)
-      : actionServices.push(point);
+    const newServices = actionServices.slice();
+    const index = newServices.indexOf(point);
+    newServices.includes(point)
+      ? newServices.splice(index, 1)
+      : newServices.push(point);
+      setActionServices(newServices);
   };
   const dispatch = useDispatch();
-  useEffect(() => {
-    setActionServices(actionServices);
+  useEffect(() => {    
+    
     dispatch(setServices(actionServices));
   }, [actionServices]);
 
@@ -30,7 +32,7 @@ export const Services = () => {
          <CheckBoxInput
               key={s.name}
               name={s.name}
-              typeinput = "radio"
+              typeinput = "checkbox"
               clas = "additionaly__service"
               label={s.label}
               setActive={setServicesValue}

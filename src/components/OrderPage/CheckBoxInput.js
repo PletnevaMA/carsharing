@@ -1,8 +1,7 @@
 import React from "react";
 
 const FilterInput = ({ name, typeinput, clas, label, setActive, filter }) => {
-  const changeHandler = (e) => setActive(e.target.value);
- 
+  const changeHandler = () => setActive(label);
   return (
     <>    
       <input
@@ -11,13 +10,15 @@ const FilterInput = ({ name, typeinput, clas, label, setActive, filter }) => {
         name={name}
         id={name}
         value={name}        
-        checked={filter.includes(name)}
+        checked= {filter.includes(label)}               
         onChange={changeHandler}
       />
+      
       <label className={`${clas}__label`} htmlFor={name}>
         {label}
       </label>
     </>
   );
+ 
 };
 export default FilterInput;

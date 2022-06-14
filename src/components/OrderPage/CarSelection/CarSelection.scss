@@ -1,3 +1,8 @@
 @import "../../../mixins.scss";
 
 @include container_step;
+
+.step__content {
+    width: 60%;
+    float:left;
+  }

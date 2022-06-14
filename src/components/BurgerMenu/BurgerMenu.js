@@ -1,9 +1,6 @@
 import React from "react";
 import "./BurgerMenu.module.scss";
-import { ReactSVG } from 'react-svg';
-import telegram from '../../images/Telegram.svg';
-import facebook from "../../images/Facebook.svg";
-import instagram from "../../images/Instagram.svg";
+import Icons from  './Icons';
 
 class BurgerMenu extends React.Component {
   render() {
@@ -38,17 +35,7 @@ class BurgerMenu extends React.Component {
               </a>
             </li>
             <li>
-              <a className="menu__item" href="#">
-              <span className = "menu__item__icon">
-              <ReactSVG src= {telegram}/>
-              </span>
-              <span className = "menu__item__icon">
-                <ReactSVG src= {facebook}/>
-              </span>
-              <span className = "menu__item__icon">
-              <ReactSVG src= {instagram}/>
-              </span>
-              </a>
+              <Icons />
             </li>
           </ul>
         </div>
