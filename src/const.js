@@ -1,5 +1,5 @@
 const Path = {
-    MAIN: '/carsharing/',
+    MAIN: '/',
     ORDERPAGE: '/order',
     CHECK: '/order/complete',
     POSITION: '/order/position',
